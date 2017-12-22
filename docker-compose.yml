@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  smartorganizer.analytics.api:
+    image: smartorganizer.analytics.api
+    build:
+      context: .
+      dockerfile: src/Services/Analytics/SmartOrganizer.Analytics.API/Dockerfile
+
+  smartorganizer.timetable.api:
+    image: smartorganizer.timetable.api
+    build:
+      context: .
+      dockerfile: src/Services/Timetable/SmartOrganizer.Timetable.API/Dockerfile
+

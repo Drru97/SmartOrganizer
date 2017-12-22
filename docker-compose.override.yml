@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  smartorganizer.analytics.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  smartorganizer.timetable.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
