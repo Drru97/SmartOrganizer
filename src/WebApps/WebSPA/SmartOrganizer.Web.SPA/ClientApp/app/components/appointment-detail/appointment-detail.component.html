@@ -1,0 +1,26 @@
+﻿<div *ngIf="appointmentDetail">
+    <div>
+        <table class="table table-bordered table-responsive table-condensed">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Title</td>
+                    <td>Description</td>
+                    <td>Location</td>
+                    <td>StartDate</td>
+                    <td>Duration</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ appointmentDetail.id }}</td>
+                    <td>{{ appointmentDetail.title }}</td>
+                    <td>{{ appointmentDetail.description }}</td>
+                    <td>{{ appointmentDetail.location }}</td>
+                    <td>{{ appointmentDetail.startDate }}</td>
+                    <td>{{ appointmentDetail.duration }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
