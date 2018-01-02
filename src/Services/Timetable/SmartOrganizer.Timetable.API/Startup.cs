@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +30,32 @@ namespace SmartOrganizer.Timetable.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyHeader();
+                    policy.AllowAnyMethod();
+                    policy.AllowAnyOrigin();
+                    policy.AllowCredentials();
+                });
+            });
+
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            var identityUrl = Configuration.GetValue<string>("IdentityUrl");
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = identityUrl;
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+            });
+
             services.AddMvc();
 
             services.AddDbContext<TimetableContext>(options =>
@@ -50,6 +79,8 @@ namespace SmartOrganizer.Timetable.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("AllowAll");
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

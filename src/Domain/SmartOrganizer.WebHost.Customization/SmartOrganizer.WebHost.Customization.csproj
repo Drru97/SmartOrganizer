@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Oleh Dutsiak</Authors>
+    <Company>Franko National University of Lviv</Company>
+    <Product>SmartOrganizer</Product>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Drru97/SmartOrganizer.git</RepositoryUrl>
+    <PackageProjectUrl>https://smart-organizer.visualstudio.com/SmartOrganizer</PackageProjectUrl>
+    <Copyright>Copyright (c) 2017</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

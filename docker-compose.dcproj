@@ -5,8 +5,8 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>7222f568-21ba-44ac-ad55-a6e9540d2185</ProjectGuid>
     <DockerLaunchBrowser>false</DockerLaunchBrowser>
-    <DockerServiceUrl>http://localhost:{ServicePort}/api/values</DockerServiceUrl>
-    <DockerServiceName>smartorganizer.analytics.api</DockerServiceName>
+    <DockerServiceUrl>http://localhost:{ServicePort}/</DockerServiceUrl>
+    <DockerServiceName>smartorganizer</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

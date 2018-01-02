@@ -17,29 +17,37 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Analytics", "Analytics", "{FD91EF5B-A053-489B-9792-3ED2B2716437}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartOrganizer.Analytics.API", "src\Services\Analytics\SmartOrganizer.Analytics.API\SmartOrganizer.Analytics.API.csproj", "{DC422804-D204-4838-95F6-E6A6DCCF98CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.Analytics.API", "src\Services\Analytics\SmartOrganizer.Analytics.API\SmartOrganizer.Analytics.API.csproj", "{DC422804-D204-4838-95F6-E6A6DCCF98CA}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7222F568-21BA-44AC-AD55-A6E9540D2185}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{CBB8BEAA-106B-42C6-8786-BC8291232122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartOrganizer.Analytics.Worker", "src\Services\Analytics\SmartOrganizer.Analytics.Worker\SmartOrganizer.Analytics.Worker.csproj", "{45E72065-71F4-4BA6-ADBD-636541406322}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.Analytics.Worker", "src\Services\Analytics\SmartOrganizer.Analytics.Worker\SmartOrganizer.Analytics.Worker.csproj", "{45E72065-71F4-4BA6-ADBD-636541406322}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lad", "Lad", "{C9D83ED9-8ADC-4C30-95FC-5656835FAD2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EasyWay", "EasyWay", "{685ADF12-A261-4AFC-B00C-627DBA81861B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartOrganizer.Lad.Client", "src\Services\Lad\SmartOrganizer.Lad.Client\SmartOrganizer.Lad.Client.csproj", "{748CDD21-F2BB-4E3D-99DB-88F6A9EA8EE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.Lad.Client", "src\Services\Lad\SmartOrganizer.Lad.Client\SmartOrganizer.Lad.Client.csproj", "{748CDD21-F2BB-4E3D-99DB-88F6A9EA8EE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GoogleMaps", "GoogleMaps", "{F3802CFA-24AA-4E57-BADE-5B2D9745B038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartOrganizer.GoogleMaps.Client", "src\Services\GoogleMaps\SmartOrganizer.GoogleMaps.Client\SmartOrganizer.GoogleMaps.Client.csproj", "{7158ABD5-E5AD-448A-A1C3-0EB5484581F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.GoogleMaps.Client", "src\Services\GoogleMaps\SmartOrganizer.GoogleMaps.Client\SmartOrganizer.GoogleMaps.Client.csproj", "{7158ABD5-E5AD-448A-A1C3-0EB5484581F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Timetable", "Timetable", "{794BDC6E-EB21-4ADC-8384-904F21FB4DC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartOrganizer.Timetable.API", "src\Services\Timetable\SmartOrganizer.Timetable.API\SmartOrganizer.Timetable.API.csproj", "{4C36FC32-5DDA-4520-8E3E-B0891E64D630}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.Timetable.API", "src\Services\Timetable\SmartOrganizer.Timetable.API\SmartOrganizer.Timetable.API.csproj", "{4C36FC32-5DDA-4520-8E3E-B0891E64D630}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartOrganizer.WebHost.Customization", "src\Domain\SmartOrganizer.WebHost.Customization\SmartOrganizer.WebHost.Customization.csproj", "{42E06891-61C3-4D0A-8D9F-65C14B8B7722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.WebHost.Customization", "src\Domain\SmartOrganizer.WebHost.Customization\SmartOrganizer.WebHost.Customization.csproj", "{42E06891-61C3-4D0A-8D9F-65C14B8B7722}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSPA", "WebSPA", "{1BEF6C4A-202D-4A86-A25C-934294D9D9DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.Identity.API", "src\Services\Identity\SmartOrganizer.Identity.API\SmartOrganizer.Identity.API.csproj", "{2E03E999-46D3-4925-A0C6-6FF0F611DEC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.Web.SPA", "src\WebApps\WebSPA\SmartOrganizer.Web.SPA\SmartOrganizer.Web.SPA.csproj", "{12F24993-48DD-4596-84F6-B1BADA1B7E4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{A18B1681-5EDD-4967-BB31-56891B279363}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +83,14 @@ Global
 		{42E06891-61C3-4D0A-8D9F-65C14B8B7722}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42E06891-61C3-4D0A-8D9F-65C14B8B7722}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42E06891-61C3-4D0A-8D9F-65C14B8B7722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E03E999-46D3-4925-A0C6-6FF0F611DEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E03E999-46D3-4925-A0C6-6FF0F611DEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E03E999-46D3-4925-A0C6-6FF0F611DEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E03E999-46D3-4925-A0C6-6FF0F611DEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F24993-48DD-4596-84F6-B1BADA1B7E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F24993-48DD-4596-84F6-B1BADA1B7E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F24993-48DD-4596-84F6-B1BADA1B7E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F24993-48DD-4596-84F6-B1BADA1B7E4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +112,10 @@ Global
 		{794BDC6E-EB21-4ADC-8384-904F21FB4DC2} = {12359244-3D1C-4CBF-B8F7-1C0EF087ECDB}
 		{4C36FC32-5DDA-4520-8E3E-B0891E64D630} = {794BDC6E-EB21-4ADC-8384-904F21FB4DC2}
 		{42E06891-61C3-4D0A-8D9F-65C14B8B7722} = {9363ED49-A478-458D-A24F-0B9A90EAC750}
+		{1BEF6C4A-202D-4A86-A25C-934294D9D9DA} = {CFE6DB5D-959B-40F9-A2ED-F70A453B6F54}
+		{2E03E999-46D3-4925-A0C6-6FF0F611DEC9} = {A18B1681-5EDD-4967-BB31-56891B279363}
+		{12F24993-48DD-4596-84F6-B1BADA1B7E4C} = {1BEF6C4A-202D-4A86-A25C-934294D9D9DA}
+		{A18B1681-5EDD-4967-BB31-56891B279363} = {12359244-3D1C-4CBF-B8F7-1C0EF087ECDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA9D86A2-E007-4D6A-84EC-303E6CB48ADD}
