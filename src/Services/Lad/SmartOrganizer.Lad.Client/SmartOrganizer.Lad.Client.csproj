@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Product>SmartOrganizer</Product>
+    <Company>Franko National University of Lviv</Company>
+    <Authors>Oleh Dutsiak</Authors>
+    <Copyright>Copyright (c) 2017</Copyright>
+    <PackageProjectUrl>https://smart-organizer.visualstudio.com/SmartOrganizer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Drru97/SmartOrganizer.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="RestSharp" Version="106.1.0" />
+  </ItemGroup>
+
+</Project>
