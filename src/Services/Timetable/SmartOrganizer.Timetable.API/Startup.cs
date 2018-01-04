@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -14,7 +15,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.PlatformAbstractions;
 using SmartOrganizer.Timetable.API.Infrastructure;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace SmartOrganizer.Timetable.API
 {
@@ -69,6 +72,26 @@ namespace SmartOrganizer.Timetable.API
 
                 options.ConfigureWarnings(warnings => warnings.Throw(RelationalEventId.QueryClientEvaluationWarning));
             });
+
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("v1", new Info
+                {
+                    Title = "Timetable API",
+                    Version = "v1",
+                    Contact = new Contact
+                    {
+                        Name = "Oleh Dutsiak",
+                        Email = "oleg.dystak@gmail.com",
+                        Url = "https://github.com/drru97/smartorganizer/"
+                    }
+                });
+
+                // enable xml comments for swagger
+                var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+                var xmlPath = Path.Combine(basePath, "Timetable.API.xml");
+                s.IncludeXmlComments(xmlPath);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,6 +101,12 @@ namespace SmartOrganizer.Timetable.API
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "Timetable API v1");
+            });
 
             app.UseCors("AllowAll");
             app.UseAuthentication();
