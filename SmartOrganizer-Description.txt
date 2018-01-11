@@ -1,0 +1,13 @@
+Background worker:
+Periodically sends requests to API and calculates average departure time by days and hours.
+Receives the most used stops and routes from statistics service.
+
+Location service:
+Gets current user location from client side and sends it to the server.
+
+Schedule service:
+Allows to add, edit or remove tasks and timetable.
+Also, calculates required time from one scheduled point to another. 
+
+Statistics service:
+

@@ -28,13 +28,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\app\components\appointment-guard\appointment-guard.service.ts" />
-    <None Remove="ClientApp\app\components\appointment-list\appointment-list.component.ts" />
+    <None Remove="ClientApp\app\components\appointment\appointment-guard\appointment-guard.service.ts" />
+    <None Remove="ClientApp\app\components\shared\models\model.module.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\app\components\appointment-guard\appointment-guard.service.ts" />
-    <TypeScriptCompile Include="ClientApp\app\components\appointment-list\appointment-list.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\appointment\appointment-guard\appointment-guard.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\shared\models\model.module.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\dist\" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

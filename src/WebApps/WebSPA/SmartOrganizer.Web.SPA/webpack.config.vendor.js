@@ -12,7 +12,10 @@ const treeShakableModules = [
     '@angular/platform-browser',
     '@angular/platform-browser-dynamic',
     '@angular/router',
-    'zone.js',
+    'node_modules/@angular-mdl',
+    'node_modules/@angular-mdl/expansion-panel',
+    'node_modules/@angular-mdl/expansion-panel/expansion-panel.scss',
+    'zone.js'
 ];
 const nonTreeShakableModules = [
     'bootstrap',
@@ -20,7 +23,7 @@ const nonTreeShakableModules = [
     'es6-promise',
     'es6-shim',
     'event-source-polyfill',
-    'jquery',
+    'jquery'
 ];
 const allModules = treeShakableModules.concat(nonTreeShakableModules);
 
@@ -71,24 +74,5 @@ module.exports = (env) => {
         ])
     });
 
-    const serverBundleConfig = merge(sharedConfig, {
-        target: 'node',
-        resolve: { mainFields: ['main'] },
-        entry: { vendor: allModules.concat(['aspnet-prerendering']) },
-        output: {
-            path: path.join(__dirname, 'ClientApp', 'dist'),
-            libraryTarget: 'commonjs2',
-        },
-        module: {
-            rules: [ { test: /\.css(\?|$)/, use: ['to-string-loader', isDevBuild ? 'css-loader' : 'css-loader?minimize' ] } ]
-        },
-        plugins: [
-            new webpack.DllPlugin({
-                path: path.join(__dirname, 'ClientApp', 'dist', '[name]-manifest.json'),
-                name: '[name]_[hash]'
-            })
-        ]
-    });
-
-    return [clientBundleConfig, serverBundleConfig];
+    return [clientBundleConfig];
 }

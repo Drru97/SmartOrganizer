@@ -1,4 +1,4 @@
-﻿<div *ngIf="appointmentDetail">
+﻿<div *ngIf="appointment">
     <div>
         <table class="table table-bordered table-responsive table-condensed">
             <thead>
@@ -13,12 +13,12 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ appointmentDetail.id }}</td>
-                    <td>{{ appointmentDetail.title }}</td>
-                    <td>{{ appointmentDetail.description }}</td>
-                    <td>{{ appointmentDetail.location }}</td>
-                    <td>{{ appointmentDetail.startDate }}</td>
-                    <td>{{ appointmentDetail.duration }}</td>
+                    <td>{{ appointment.id }}</td>
+                    <td>{{ appointment.title }}</td>
+                    <td>{{ appointment.description }}</td>
+                    <td>{{ appointment.location }}</td>
+                    <td>{{ appointment.startDate }}</td>
+                    <td>{{ appointment.duration }}</td>
                 </tr>
             </tbody>
         </table>

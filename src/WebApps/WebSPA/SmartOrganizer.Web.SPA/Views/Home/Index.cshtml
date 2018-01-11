@@ -2,9 +2,27 @@
     ViewData["Title"] = "Home Page";
 }
 
-<app asp-prerender-module="ClientApp/dist/main-server">Loading...</app>
+<app>
+    <script type="text/javascript" src="please-wait.js"></script>
+    <script type="text/javascript">
+        window.loading_screen = window.pleaseWait({
+            logo: 'logo.png',
+            backgroundColor: '#3f51b5',
+            loadingHtml: 
+           `<div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+            </div>`
+        });
+    </script>
+</app>
 
-<script src="~/dist/vendor.js" asp-append-version="true"></script>
 @section scripts {
+    <script src="~/dist/vendor.js" asp-append-version="true"></script>
     <script src="~/dist/main-client.js" asp-append-version="true"></script>
 }
+
+<script type="text/javascript">window.loading_screen.finish();</script>

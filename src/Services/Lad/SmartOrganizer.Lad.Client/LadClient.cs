@@ -18,6 +18,7 @@ namespace SmartOrganizer.Lad.Client
             return await GetAsync<LadStopsResponse>(resuest);
         }
 
+        // TODO: Check this
         public async Task<List<LadRoutesResponse>> GetAllRoutes()
         {
             var request = new RestRequest("routes");

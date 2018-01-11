@@ -1,0 +1,8 @@
+﻿<ul class="mdl-list">
+    <li class="mdl-list__item mdl-list__item--three-line" *ngFor="let appointment of appointments">
+        <span class="mdl-list__item-primary-content">
+            <a [routerLink]="['/appointment', appointment.id]">{{ appointment.title }}</a>
+            <span class="mdl-list__item-text-body">{{ appointment.description }}</span>
+        </span>
+    </li>
+</ul>

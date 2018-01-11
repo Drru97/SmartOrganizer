@@ -1,0 +1,6 @@
+Application URL's
+
+WebSPA: 8000
+Timetable: 8001
+Analytics: 8002
+Identity: 8003

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Product>SmartOrganizer</Product>
+    <Company>Franko National University of Lviv</Company>
+    <Authors>Oleh Dutsiak</Authors>
+    <Copyright>Copyright (c) 2017</Copyright>
+    <PackageProjectUrl>https://smart-organizer.visualstudio.com/SmartOrganizer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Drru97/SmartOrganizer.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Unofficial.Microsoft.WindowsAzure.ServiceRuntime" Version="2.9.0" />
+  </ItemGroup>
+
+</Project>

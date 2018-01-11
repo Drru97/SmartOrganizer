@@ -11,9 +11,10 @@ export class AppointmentGuardService implements CanActivate {
         if (isNaN(id) || id < 0) {
             console.log('Invalid appointment id');
             this.router.navigate(['/appointment']);
+            console.log('error');
             return false;
         }
-
+        console.log('okay');
         return true;
     }
 }
