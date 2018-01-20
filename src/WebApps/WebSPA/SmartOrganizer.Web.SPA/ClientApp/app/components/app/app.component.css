@@ -1,1 +1,18 @@
+.container {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
 
+mat-toolbar span a {
+    color: #ffffff;
+}
+
+a.ng-star-inserted {
+    color: #ffffff;
+}
+
+a.ng-star-inserted:hover, a.ng-star-inserted:focus {
+    text-decoration: none;
+}

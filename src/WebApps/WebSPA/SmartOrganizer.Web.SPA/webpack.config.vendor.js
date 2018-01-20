@@ -9,12 +9,10 @@ const treeShakableModules = [
     '@angular/core',
     '@angular/forms',
     '@angular/http',
+    '@angular/material',
     '@angular/platform-browser',
     '@angular/platform-browser-dynamic',
     '@angular/router',
-    'node_modules/@angular-mdl',
-    'node_modules/@angular-mdl/expansion-panel',
-    'node_modules/@angular-mdl/expansion-panel/expansion-panel.scss',
     'zone.js'
 ];
 const nonTreeShakableModules = [

@@ -1,29 +1,20 @@
-<div>
-    <mdl-layout mdl-layout-fixed-header mdl-layout-tab-active-index="0">
-        <mdl-layout-header>
-            <mdl-layout-header-row>
-                <mdl-layout-title>Smart Organizer</mdl-layout-title>
-            </mdl-layout-header-row>
-        </mdl-layout-header>
-        <mdl-layout-drawer>
-            <mdl-layout-title>Smart Organizer</mdl-layout-title>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link">Home</a>
-                <a class="mdl-navigation__link">Appointment</a>
-                <a class="mdl-navigation__link">Statistics</a>
-            </nav>
-        </mdl-layout-drawer>
-        <mdl-layout-content>
-            <mdl-layout-tab-panel mdl-layout-tab-panel-title="Home">
-                Home
-            </mdl-layout-tab-panel>
-            <mdl-layout-tab-panel mdl-layout-tab-panel-title="Appointment">
-                <appointment-list></appointment-list>
-                <router-outlet></router-outlet>
-            </mdl-layout-tab-panel>
-            <mdl-layout-tab-panel mdl-layout-tab-panel-title="Statistics">
-                Statistics
-            </mdl-layout-tab-panel>
-        </mdl-layout-content>
-    </mdl-layout>
+<div class="container">
+    <mat-toolbar color="primary">
+        <span><a [routerLink]="['/home']">Smart Organizer</a></span>
+    </mat-toolbar>
+
+    <mat-tab-group backgroundColor="primary" [selectedIndex]="activeTabIndex" (selectedTabChange)="tabChanged($event)">
+        <mat-tab>
+            <ng-template mat-tab-label><a [routerLink]="['/home']">Home</a></ng-template>
+            <!-- content -->
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label><a [routerLink]="['/appointment']">Appointment</a></ng-template>
+            <!-- content -->
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label><a [routerLink]="['/statistics']">Statistics</a></ng-template>
+        </mat-tab>
+    </mat-tab-group>
+    <router-outlet></router-outlet>
 </div>

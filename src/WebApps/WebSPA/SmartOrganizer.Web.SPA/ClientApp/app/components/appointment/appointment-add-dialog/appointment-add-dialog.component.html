@@ -1,0 +1,17 @@
+﻿<div class="add-appointment-dialog-container">
+    <h1 mat-dialog-title>Add appointment</h1>
+
+    <mat-form-field>
+        <input matInput placeholder="Title" [formControl]="title" required/>
+        <mat-error *ngIf="title.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <textarea matInput placeholder="Description"></textarea>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input matInput placeholder="Location" [formControl]="location" required/>
+        <mat-error *ngIf="location.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+</div>

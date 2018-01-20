@@ -1,2 +1,25 @@
-﻿body {
+﻿.appointment-list .mat-expansion-panel-header-title,
+.appointment-list .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.appointment-list .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mat-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button.mat-raised-button {
+    min-width: 40px;
+}
+
+.add-appointment-holder {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }

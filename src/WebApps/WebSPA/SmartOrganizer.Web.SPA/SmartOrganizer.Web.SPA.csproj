@@ -28,12 +28,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\appointment\appointment-add-dialog\appointment-add-dialog.component.ts" />
     <None Remove="ClientApp\app\components\appointment\appointment-guard\appointment-guard.service.ts" />
+    <None Remove="ClientApp\app\components\home\home.component.ts" />
+    <None Remove="ClientApp\app\components\home\home.module.ts" />
     <None Remove="ClientApp\app\components\shared\models\model.module.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\appointment\appointment-add-dialog\appointment-add-dialog.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\appointment\appointment-guard\appointment-guard.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\home\home.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\home\home.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\models\model.module.ts" />
   </ItemGroup>
 

@@ -11,7 +11,6 @@ export class DataService {
 
     public get(url: string, params?: any): Observable<Response> {
         let options: RequestOptionsArgs = {};
-
         return this.http.get(url, options)
             .map((response: Response) => {
                 return response;

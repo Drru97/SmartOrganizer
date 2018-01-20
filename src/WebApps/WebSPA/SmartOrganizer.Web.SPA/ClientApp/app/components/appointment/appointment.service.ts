@@ -19,6 +19,7 @@ export class AppointmentService {
     }
 
     getAppointments(): Observable<Appointment[]> {
+        console.log(this.timetableUrl);
         return this.dataService.get(this.timetableUrl).map((response: Response) => {
             return response.json()['appointments'];
         });

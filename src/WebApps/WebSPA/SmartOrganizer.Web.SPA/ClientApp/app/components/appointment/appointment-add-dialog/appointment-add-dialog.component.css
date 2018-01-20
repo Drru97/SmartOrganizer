@@ -1,0 +1,8 @@
+﻿.add-appointment-dialog-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-appointment-dialog-container > * {
+    width: 100%;
+}
