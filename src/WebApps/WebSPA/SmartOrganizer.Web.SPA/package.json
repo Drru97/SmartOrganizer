@@ -58,5 +58,8 @@
     "webpack-mdl": "^1.0.2",
     "webpack-merge": "4.1.0",
     "zone.js": "0.8.12"
+  },
+  "dependencies": {
+    "ng-pick-datetime": "^5.1.2"
   }
 }

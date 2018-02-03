@@ -21,6 +21,7 @@ import { LocalStorageModule } from 'angular-2-local-storage';
 import { HomeComponent } from './components/home/home.component';
 import { AppointmentListComponent } from './components/appointment/appointment-list/appointment-list.component';
 
+import { AppointmentAddDialogComponent } from './components/appointment/appointment-add-dialog/appointment-add-dialog.component';
 
 @NgModule({
     imports: [
@@ -54,6 +55,9 @@ import { AppointmentListComponent } from './components/appointment/appointment-l
     ],
     bootstrap: [
         AppComponent
+    ],
+    entryComponents: [
+        AppointmentAddDialogComponent
     ]
 })
 export class AppModule {

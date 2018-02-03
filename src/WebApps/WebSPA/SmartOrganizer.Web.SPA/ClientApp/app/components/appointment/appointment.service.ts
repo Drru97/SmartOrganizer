@@ -32,4 +32,28 @@ export class AppointmentService {
             return response.json();
         });
     }
+
+    addAppointment(appointment: Appointment): Observable<boolean> {
+        let url = this.timetableUrl;
+
+        return this.dataService.post(url, appointment).map((response: Response) => {
+            return true;
+        });
+    }
+
+    editAppointment(id: number, newAppointmentData: Appointment) {
+        let url = this.timetableUrl;
+
+        return this.dataService.put(url, newAppointmentData).map((response: Response) => {
+            return true;
+        });
+    }
+
+    deleteAppointment(id: number) {
+        let url = this.timetableUrl + `/${id}`;
+
+        return this.dataService.delete(url).map((response: Response) => {
+            return true;
+        });
+    }
 }

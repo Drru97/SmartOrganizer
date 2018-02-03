@@ -7,5 +7,5 @@ export class Appointment {
     description: string;
     location: string;
     startDate: Date;
-    duration: string;
+    endDate: Date;
 }

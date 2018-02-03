@@ -11,9 +11,10 @@ using System;
 namespace SmartOrganizer.Timetable.API.Migrations
 {
     [DbContext(typeof(TimetableContext))]
-    partial class TimetableContextModelSnapshot : ModelSnapshot
+    [Migration("20180126103821_Add-end-date")]
+    partial class Addenddate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

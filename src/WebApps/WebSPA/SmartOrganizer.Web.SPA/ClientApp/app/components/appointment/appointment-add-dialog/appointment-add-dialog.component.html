@@ -1,17 +1,30 @@
 ﻿<div class="add-appointment-dialog-container">
-    <h1 mat-dialog-title>Add appointment</h1>
+    <h1 mat-dialog-title>{{ isEdit ? 'Edit' : 'Add' }} appointment</h1>
 
     <mat-form-field>
-        <input matInput placeholder="Title" [formControl]="title" required/>
+        <input matInput placeholder="Title" [formControl]="title" required />
         <mat-error *ngIf="title.invalid">{{ getErrorMessage() }}</mat-error>
     </mat-form-field>
-    
+
     <mat-form-field>
-        <textarea matInput placeholder="Description"></textarea>
+        <textarea matInput placeholder="Description" [formControl]="description"></textarea>
     </mat-form-field>
-    
+
     <mat-form-field>
-        <input matInput placeholder="Location" [formControl]="location" required/>
+        <input matInput placeholder="Location" [formControl]="location" required />
         <mat-error *ngIf="location.invalid">{{ getErrorMessage() }}</mat-error>
     </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Start date" [formControl]="startDate" [owlDateTimeTrigger]="sd" [owlDateTime]="sd" required />
+        <owl-date-time [pickerMode]="'dialog'" #sd></owl-date-time>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="End date" [formControl]="endDate" [owlDateTimeTrigger]="ed" [owlDateTime]="ed" required />
+        <owl-date-time [pickerMode]="'dialog'" #ed></owl-date-time>
+    </mat-form-field>
+    
+    <button mat-raised-button (click)="addAppointment()" color="primary">Add</button>
+    <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
 </div>

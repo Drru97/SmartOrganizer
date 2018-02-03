@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+﻿import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -18,8 +18,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatDialogRef } from '@angular/material';
+import {  } from '@angular/material';
 
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 @NgModule({
     imports: [
@@ -36,7 +37,9 @@ import { MatDialogRef } from '@angular/material';
         MatButtonModule,
         MatDialogModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        OwlDateTimeModule,
+        OwlNativeDateTimeModule
     ],
     declarations: [
         AppointmentListComponent,
@@ -46,13 +49,18 @@ import { MatDialogRef } from '@angular/material';
     providers: [
         AppointmentService,
         AppointmentGuardService,
-        MatDialogRef
+        
+
+     //   MatDialogRef
     ],
     exports: [
         AppointmentListComponent
     ],
     entryComponents: [
         AppointmentAddDialogComponent
+    ],
+    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA
     ]
 })
 export class AppointmentModule { }

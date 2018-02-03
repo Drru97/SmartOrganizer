@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatDialogRef, MatDialogConfig } from '@angular/material';
 
 import { AppointmentService } from '../appointment.service';
 import { ConfigurationService } from '../../shared/services/configuration.service';
@@ -16,11 +16,10 @@ export class AppointmentListComponent implements OnInit {
     appointments: Appointment[];
     newAppointment: Appointment;
 
-    constructor(
+    constructor(public dialog: MatDialog,
         private service: AppointmentService,
         private configurationService: ConfigurationService,
-        private router: Router,
-        public dialog: MatDialog) {
+        private router: Router) {
     }
 
     ngOnInit(): void {
@@ -44,9 +43,13 @@ export class AppointmentListComponent implements OnInit {
     openDialog(): void {
         let dialogRef = this.dialog.open(AppointmentAddDialogComponent,
             {
-                width: '250px',
-                height: '250px',
-                data: this.newAppointment
+                width: '50%',
+                height: '50%',
+                data:
+                {
+                    action: 'Add',
+                    app: this.newAppointment
+                }
             });
 
         dialogRef.afterClosed().subscribe(result => {
@@ -55,10 +58,22 @@ export class AppointmentListComponent implements OnInit {
     }
 
     editAppointment(id: number): void {
-        this.router.navigate([`/appointment/${id}`]);
+        let appointment = this.appointments.find(i => i.id === id);
+
+        let dialogRef = this.dialog.open(AppointmentAddDialogComponent,
+            {
+                data: {
+                    selectedAppointment: appointment,
+                    action: 'Edit'
+                }
+            });
+        
+        //  this.router.navigate([`/appointment/${id}`]);
     }
 
     deleteAppointment(id: number): void {
-        
+        let index = this.appointments.findIndex(i => i.id === id);
+        this.appointments.splice(index, 1);
+        this.service.deleteAppointment(id).subscribe(() => console.log('deleted'));
     }
 }

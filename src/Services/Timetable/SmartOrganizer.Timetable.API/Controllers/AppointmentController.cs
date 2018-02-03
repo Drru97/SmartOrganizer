@@ -104,7 +104,7 @@ namespace SmartOrganizer.Timetable.API.Controllers
                 Location = appointment.Location,
                 CreationDate = DateTime.Now,
                 StartDate = appointment.StartDate,
-                Duration = appointment.Duration
+                EndDate = appointment.EndDate
             };
 
             await _context.Appointments.AddAsync(item);
@@ -144,7 +144,7 @@ namespace SmartOrganizer.Timetable.API.Controllers
             item.Description = appointment.Description;
             item.Location = appointment.Location;
             item.StartDate = appointment.StartDate;
-            item.Duration = appointment.Duration;
+            item.EndDate = appointment.EndDate;
 
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetAppointment), new { id = appointment.Id }, null);

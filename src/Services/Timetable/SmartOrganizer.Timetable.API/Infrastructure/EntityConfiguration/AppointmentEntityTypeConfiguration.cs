@@ -31,7 +31,7 @@ namespace SmartOrganizer.Timetable.API.Infrastructure.EntityConfiguration
 
             builder.Property(p => p.StartDate);
 
-            builder.Property(p => p.Duration);
+            builder.Property(p => p.EndDate);
         }   
     }
 }

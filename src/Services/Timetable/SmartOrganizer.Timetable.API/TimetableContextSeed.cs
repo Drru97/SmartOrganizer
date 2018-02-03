@@ -29,7 +29,7 @@ namespace SmartOrganizer.Timetable.API
                     Location = "Львів, Олени Степанівни, 45",
                     CreationDate = DateTime.Now,
                     StartDate = new DateTime(2018, 3, 14, 18, 30, 0),
-                    Duration = TimeSpan.FromHours(3)
+                    EndDate = new DateTime(2018, 3, 14, 22, 0, 0)
                 },
                 new Appointment
                 {
@@ -38,7 +38,7 @@ namespace SmartOrganizer.Timetable.API
                     Location = "Львів, Achtung Lemberg",
                     CreationDate = DateTime.Now,
                     StartDate = new DateTime(2017, 12, 22, 19, 0, 0),
-                    Duration = TimeSpan.FromHours(2)
+                    EndDate = new DateTime(2017, 12, 22, 21, 30, 0)
                 },
                 new Appointment
                 {
@@ -47,7 +47,7 @@ namespace SmartOrganizer.Timetable.API
                     Location = "Славське, Архангельського, 22",
                     CreationDate = DateTime.Now,
                     StartDate = new DateTime(2018, 1, 25, 12, 0, 0),
-                    Duration = TimeSpan.FromHours(12)
+                    EndDate = new DateTime(2018, 1, 28, 18, 0, 0)
                 }
             };
         }
