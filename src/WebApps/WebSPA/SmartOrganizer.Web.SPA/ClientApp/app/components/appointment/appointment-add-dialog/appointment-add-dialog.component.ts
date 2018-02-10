@@ -49,17 +49,22 @@ export class AppointmentAddDialogComponent implements OnInit {
         return 'You must input a value';
     }
 
-    addAppointment() {
+    save() {
         this.appointment = new Appointment();
         this.appointment.title = this.title.value;
         this.appointment.description = this.description.value;
         this.appointment.location = this.location.value;
         this.appointment.startDate = this.startDate.value;
         this.appointment.endDate = this.endDate.value;
-
-        console.log(this.appointment);
-
-        this.service.addAppointment(this.appointment).subscribe(() => console.log('appointment added'));
+        
+        if (this.isEdit) {
+            this.service.addAppointment(this.appointment).subscribe(() => console.log('appointment added'));
+        }
+        else {
+            let appointmentId = this.data.selectedAppointment.id;
+            this.service.editAppointment(appointmentId, this.appointment).subscribe(() => console.log("Appointment modified"));
+        }
+                
         this.cancel();
     }
 }

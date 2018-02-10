@@ -62,6 +62,8 @@ export class AppointmentListComponent implements OnInit {
 
         let dialogRef = this.dialog.open(AppointmentAddDialogComponent,
             {
+                width: '50%',
+                height: '50%',
                 data: {
                     selectedAppointment: appointment,
                     action: 'Edit'
