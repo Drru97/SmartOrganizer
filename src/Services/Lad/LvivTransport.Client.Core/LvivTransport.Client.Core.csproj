@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <Product>LvivTransport</Product>
+    <Company>Franko National University of Lviv</Company>
+    <Authors>Oleh Dutsiak</Authors>
+    <Copyright>Copyright (c) 2017</Copyright>
+    <PackageProjectUrl>https://github.com/Drru97/lviv-transport-client</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Drru97/lviv-transport-client.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-alpha</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="0.9.9.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>
