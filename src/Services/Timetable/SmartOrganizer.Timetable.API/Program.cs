@@ -21,6 +21,7 @@ namespace SmartOrganizer.Timetable.API
         public static IWebHost BuildWebHost(string[] args) =>
             Microsoft.AspNetCore.WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://localhost:8001")
                 .Build();
     }
 }
