@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.PlatformAbstractions;
-using SmartOrganizer.Timetable.API.Infrastructure;
+using SmartOrganizer.Timetable.DataAccess;
 using SmartOrganizer.Timetable.Services.Directions;
 using SmartOrganizer.Timetable.Services.Geocoding;
 using Swashbuckle.AspNetCore.Swagger;
@@ -14,6 +14,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Reflection;
+using SmartOrganizer.Timetable.Services.Appointment;
 
 namespace SmartOrganizer.Timetable.API
 {
@@ -32,7 +33,8 @@ namespace SmartOrganizer.Timetable.API
 			services
 				.AddSingleton<IDirectionsResponseAdapter, DirectionsResponseAdapter>()
 				.AddTransient<IGeocodingService, GeocodingService>()
-				.AddTransient<IDirectionsService, DirectionsService>();
+				.AddTransient<IDirectionsService, DirectionsService>()
+				.AddTransient<IAppointmentService, AppointmentService>();
 
 			services.AddCors(options =>
 			{
