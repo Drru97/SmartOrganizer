@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\GoogleMaps\GoogleMapsAPI.NET\GoogleMapsAPI.NET.csproj" />
+    <ProjectReference Include="..\SmartOrganizer.Timetable.DataAccess\SmartOrganizer.Timetable.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

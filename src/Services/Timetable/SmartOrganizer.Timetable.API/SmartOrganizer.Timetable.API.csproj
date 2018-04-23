@@ -31,6 +31,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Domain\SmartOrganizer.WebHost.Customization\SmartOrganizer.WebHost.Customization.csproj" />
+    <ProjectReference Include="..\SmartOrganizer.Timetable.DataAccess\SmartOrganizer.Timetable.DataAccess.csproj" />
+    <ProjectReference Include="..\SmartOrganizer.Timetable.Services\SmartOrganizer.Timetable.Services.csproj" />
   </ItemGroup>
 
 </Project>
