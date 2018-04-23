@@ -52,11 +52,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleMapsAPI.NET", "src\Services\GoogleMaps\GoogleMapsAPI.NET\GoogleMapsAPI.NET.csproj", "{3EC99D1E-0F99-4E0A-8C82-FA50BC6EDFD2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LvivTransport.Client.Core", "src\Services\Lad\LvivTransport.Client.Core\LvivTransport.Client.Core.csproj", "{171AB8BB-658E-4BF1-98BE-790A39DD9AFF}"
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartOrganizer.Services.Tests", "test\Services\SmartOrganizer.Services.Tests\SmartOrganizer.Services.Tests.csproj", "{0C1723F0-88EA-4C71-B5D4-08BF63962C45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.Services.Tests", "test\Services\SmartOrganizer.Services.Tests\SmartOrganizer.Services.Tests.csproj", "{0C1723F0-88EA-4C71-B5D4-08BF63962C45}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.Timetable.Services", "src\Services\Timetable\SmartOrganizer.Timetable.Services\SmartOrganizer.Timetable.Services.csproj", "{D7F723E8-B60E-423F-9A1E-EE5E7F205B35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartOrganizer.Timetable.DataAccess", "src\Services\Timetable\SmartOrganizer.Timetable.DataAccess\SmartOrganizer.Timetable.DataAccess.csproj", "{782B2D11-B069-4E88-AF38-862C81C0DD28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartOrganizer.Timetable.DataAccess", "src\Services\Timetable\SmartOrganizer.Timetable.DataAccess\SmartOrganizer.Timetable.DataAccess.csproj", "{782B2D11-B069-4E88-AF38-862C81C0DD28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -108,6 +109,18 @@ Global
 		{171AB8BB-658E-4BF1-98BE-790A39DD9AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{171AB8BB-658E-4BF1-98BE-790A39DD9AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{171AB8BB-658E-4BF1-98BE-790A39DD9AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C1723F0-88EA-4C71-B5D4-08BF63962C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1723F0-88EA-4C71-B5D4-08BF63962C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1723F0-88EA-4C71-B5D4-08BF63962C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1723F0-88EA-4C71-B5D4-08BF63962C45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F723E8-B60E-423F-9A1E-EE5E7F205B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F723E8-B60E-423F-9A1E-EE5E7F205B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F723E8-B60E-423F-9A1E-EE5E7F205B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F723E8-B60E-423F-9A1E-EE5E7F205B35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{782B2D11-B069-4E88-AF38-862C81C0DD28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782B2D11-B069-4E88-AF38-862C81C0DD28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782B2D11-B069-4E88-AF38-862C81C0DD28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782B2D11-B069-4E88-AF38-862C81C0DD28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
