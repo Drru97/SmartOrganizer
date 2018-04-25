@@ -4,6 +4,6 @@ namespace SmartOrganizer.Timetable.Services.ViewModels
 {
 	public class TimetableViewModel
 	{
-		public IEnumerable<TimetableViewItem> TimetableViewItems { get; set; }
+		public ICollection<TimetableViewItem> TimetableViewItems { get; set; }
 	}
 }

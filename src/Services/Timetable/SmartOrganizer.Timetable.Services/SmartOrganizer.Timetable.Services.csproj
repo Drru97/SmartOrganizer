@@ -7,6 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\GoogleMaps\GoogleMapsAPI.NET\GoogleMapsAPI.NET.csproj" />
     <ProjectReference Include="..\SmartOrganizer.Timetable.DataAccess\SmartOrganizer.Timetable.DataAccess.csproj" />
+    <ProjectReference Include="..\SmartOrganizer.Timetable.Domain\SmartOrganizer.Timetable.Domain.csproj" />
   </ItemGroup>
 
 </Project>

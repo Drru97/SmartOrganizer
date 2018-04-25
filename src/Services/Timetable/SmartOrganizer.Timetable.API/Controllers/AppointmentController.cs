@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SmartOrganizer.Timetable.DataAccess.Models;
 using SmartOrganizer.Timetable.Services.Appointment;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SmartOrganizer.Timetable.Domain.Models;
 
 namespace SmartOrganizer.Timetable.API.Controllers
 {
@@ -36,7 +36,7 @@ namespace SmartOrganizer.Timetable.API.Controllers
 		[ProducesResponseType(typeof(NoContentResult), 204)]
 		public async Task<IActionResult> GetAppointments()
 		{
-			var data = await _appointmentService.GetAppointments();
+			var data = await _appointmentService.GetAppointments(null, null);
 
 			if (!data.Any())
 			{

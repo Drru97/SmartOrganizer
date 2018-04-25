@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SmartOrganizer.Timetable.DataAccess.Models
+namespace SmartOrganizer.Timetable.Domain.Models
 {
 	public class Appointment
 	{

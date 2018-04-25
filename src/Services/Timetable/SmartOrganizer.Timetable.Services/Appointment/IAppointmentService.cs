@@ -5,10 +5,10 @@ namespace SmartOrganizer.Timetable.Services.Appointment
 {
 	public interface IAppointmentService
 	{
-		Task<IEnumerable<DataAccess.Models.Appointment>> GetAppointments();
-		Task<DataAccess.Models.Appointment> GetAppointment(int id);
-		Task AddAppointment(DataAccess.Models.Appointment appointment);
-		Task<DataAccess.Models.Appointment> UpdateAppointment(DataAccess.Models.Appointment appointment);
+		Task<IEnumerable<Domain.Models.Appointment>> GetAppointments(AppointmentQueryParams query, AppointmentPagingModel paging);
+		Task<Domain.Models.Appointment> GetAppointment(int id);
+		Task AddAppointment(Domain.Models.Appointment appointment);
+		Task<Domain.Models.Appointment> UpdateAppointment(Domain.Models.Appointment appointment);
 		Task DeleteAppointment(int id);
 	}
 }

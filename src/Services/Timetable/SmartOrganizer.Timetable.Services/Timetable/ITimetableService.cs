@@ -1,9 +1,10 @@
-﻿using SmartOrganizer.Timetable.Services.ViewModels;
+﻿using System.Threading.Tasks;
+using SmartOrganizer.Timetable.Services.ViewModels;
 
 namespace SmartOrganizer.Timetable.Services.Timetable
 {
 	public interface ITimetableService
 	{
-		TimetableViewModel GetTimetable();
+		Task<TimetableViewModel> GetTimetable(TimetableQueryParams query);
 	}
 }

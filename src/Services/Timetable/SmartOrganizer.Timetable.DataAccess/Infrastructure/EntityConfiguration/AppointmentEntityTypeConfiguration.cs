@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using SmartOrganizer.Timetable.DataAccess.Models;
+using SmartOrganizer.Timetable.Domain.Models;
 
 namespace SmartOrganizer.Timetable.DataAccess.Infrastructure.EntityConfiguration
 {

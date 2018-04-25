@@ -23,6 +23,12 @@ namespace GoogleMapsAPI.NET.API.Directions.Components
         [DataMember(Name = "departure_stop")]
         public TransitStopStation DepartureStop { get; set; }
 
+		/// <summary>
+		/// Transit line
+		/// </summary>
+		[DataMember(Name = "line")]
+	    public TransitLine TransitLine { get; set; }
+
         #endregion
 
     }

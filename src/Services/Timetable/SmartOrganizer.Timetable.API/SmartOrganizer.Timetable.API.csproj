@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
   </ItemGroup>
 
@@ -31,7 +32,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Domain\SmartOrganizer.WebHost.Customization\SmartOrganizer.WebHost.Customization.csproj" />
-    <ProjectReference Include="..\SmartOrganizer.Timetable.DataAccess\SmartOrganizer.Timetable.DataAccess.csproj" />
+    <ProjectReference Include="..\SmartOrganizer.Timetable.Domain\SmartOrganizer.Timetable.Domain.csproj" />
     <ProjectReference Include="..\SmartOrganizer.Timetable.Services\SmartOrganizer.Timetable.Services.csproj" />
   </ItemGroup>
 

@@ -14,7 +14,10 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.IO;
 using System.Reflection;
+using GoogleMapsAPI.NET.API.Client;
+using GoogleMapsAPI.NET.API.Client.Interfaces;
 using SmartOrganizer.Timetable.Services.Appointment;
+using SmartOrganizer.Timetable.Services.Timetable;
 
 namespace SmartOrganizer.Timetable.API
 {
@@ -32,9 +35,11 @@ namespace SmartOrganizer.Timetable.API
 		{
 			services
 				.AddSingleton<IDirectionsResponseAdapter, DirectionsResponseAdapter>()
+				.AddTransient<IMapsAPIClient, MapsAPIClient>(c => new MapsAPIClient("AIzaSyCX780yRIpZYmbfQaE4imqJZQ9rCyar5mw"))
 				.AddTransient<IGeocodingService, GeocodingService>()
 				.AddTransient<IDirectionsService, DirectionsService>()
-				.AddTransient<IAppointmentService, AppointmentService>();
+				.AddTransient<IAppointmentService, AppointmentService>()
+				.AddTransient<ITimetableService, TimetableService>();
 
 			services.AddCors(options =>
 			{

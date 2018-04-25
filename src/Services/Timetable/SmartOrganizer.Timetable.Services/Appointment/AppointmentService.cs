@@ -16,23 +16,32 @@ namespace SmartOrganizer.Timetable.Services.Appointment
 			_context = context ?? throw new ArgumentNullException(nameof(context));
 		}
 
-		public async Task<IEnumerable<DataAccess.Models.Appointment>> GetAppointments()
+		public async Task<IEnumerable<Domain.Models.Appointment>> GetAppointments(AppointmentQueryParams query, AppointmentPagingModel paging)
 		{
-			return await _context.Appointments.ToListAsync();
+			var appointments = await _context.Appointments.ToListAsync();
+
+			if (query.FromTime.HasValue)
+				appointments = appointments.Where(ap => ap.StartDate >= query.FromTime.Value).ToList();
+			if (query.ByTime.HasValue)
+				appointments = appointments.Where(ap => ap.EndDate <= query.ByTime.Value).ToList();
+
+			appointments = appointments.Skip(paging.SkipRecords).Take(paging.TakeRecords).ToList();
+
+			return appointments;
 		}
 
-		public async Task<DataAccess.Models.Appointment> GetAppointment(int id)
+		public async Task<Domain.Models.Appointment> GetAppointment(int id)
 		{
 			return (await _context.Appointments.Where(ap => ap.Id == id).ToListAsync()).FirstOrDefault();
 		}
 
-		public async Task AddAppointment(DataAccess.Models.Appointment appointment)
+		public async Task AddAppointment(Domain.Models.Appointment appointment)
 		{
 			await _context.Appointments.AddAsync(appointment);
 			await _context.SaveChangesAsync();
 		}
 
-		public async Task<DataAccess.Models.Appointment> UpdateAppointment(DataAccess.Models.Appointment appointment)
+		public async Task<Domain.Models.Appointment> UpdateAppointment(Domain.Models.Appointment appointment)
 		{
 			_context.Appointments.Update(appointment);
 			await _context.SaveChangesAsync();
