@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Moq;
-using SmartOrganizer.Timetable.DataAccess.Models;
+using SmartOrganizer.Timetable.Domain.Models;
 using SmartOrganizer.Timetable.Services.Appointment;
 using Xunit;
 
