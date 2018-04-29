@@ -9,6 +9,7 @@
     <PackageProjectUrl>https://smart-organizer.visualstudio.com/SmartOrganizer</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Drru97/SmartOrganizer.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <ProjectGuid>45E72065-71F4-4BA6-ADBD-636541406322</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>

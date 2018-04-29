@@ -10,6 +10,7 @@
     <PackageProjectUrl>https://smart-organizer.visualstudio.com/SmartOrganizer</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Drru97/SmartOrganizer.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <ProjectGuid>DC422804-D204-4838-95F6-E6A6DCCF98CA</ProjectGuid>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

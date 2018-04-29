@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>3EC99D1E-0F99-4E0A-8C82-FA50BC6EDFD2</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CoreCompat.System.Drawing" Version="1.0.0-beta006" />
