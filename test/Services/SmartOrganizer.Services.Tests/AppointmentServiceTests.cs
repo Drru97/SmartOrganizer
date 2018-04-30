@@ -30,27 +30,5 @@ namespace SmartOrganizer.Services.Tests
 
             Assert.Equal(id, appointment.Id);
         }
-
-        [Fact]
-        public async Task CanGetAppointmentByFliterQuery()
-        {
-
-            //var query = new AppointmentQueryParams
-            //{
-            //    FromTime = new DateTime(2018, 12, 12, 0, 0, 0),
-            //    ByTime = new DateTime(2018, 12, 13, 0, 0, 0)
-            //};
-            //var pagingModel = new AppointmentPagingModel
-            //{
-            //    TakeRecords = 10,
-            //    SkipRecords = 0
-            //};
-
-            //var appointments = await _appointmentService.GetAppointments(query, pagingModel);
-            
-            //Assert.NotNull(appointments);
-            //Assert.NotEmpty(appointments);
-            //Assert.Equal(appointments.Single().Id, 1);
-        }
     }
 }
