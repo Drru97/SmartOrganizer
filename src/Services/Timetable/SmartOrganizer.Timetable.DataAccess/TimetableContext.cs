@@ -6,6 +6,11 @@ namespace SmartOrganizer.Timetable.DataAccess
 {
 	public class TimetableContext : DbContext
 	{
+		public TimetableContext()
+		{
+			
+		}
+		
 		public TimetableContext(DbContextOptions<TimetableContext> options) : base(options)
 		{
 			// TODO: additional logic in here

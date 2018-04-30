@@ -1,17 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <ProjectGuid>782B2D11-B069-4E88-AF38-862C81C0DD28</ProjectGuid>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\SmartOrganizer.Timetable.Domain\SmartOrganizer.Timetable.Domain.csproj" />
   </ItemGroup>
-
 </Project>
