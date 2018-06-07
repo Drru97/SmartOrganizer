@@ -33,6 +33,8 @@
     <None Remove="ClientApp\app\components\appointment\appointment-guard\appointment-guard.service.ts" />
     <None Remove="ClientApp\app\components\home\home.component.ts" />
     <None Remove="ClientApp\app\components\home\home.module.ts" />
+    <None Remove="ClientApp\app\components\login\login.module.ts" />
+    <None Remove="ClientApp\app\components\login\login.service.ts" />
     <None Remove="ClientApp\app\components\shared\models\model.module.ts" />
   </ItemGroup>
 
@@ -41,6 +43,8 @@
     <TypeScriptCompile Include="ClientApp\app\components\appointment\appointment-guard\appointment-guard.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\home\home.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\home\home.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\login\login.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\login\login.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\shared\models\model.module.ts" />
   </ItemGroup>
 

@@ -60,6 +60,7 @@
     "zone.js": "0.8.12"
   },
   "dependencies": {
+    "angularx-social-login": "^1.2.0",
     "ng-pick-datetime": "^5.1.2"
   }
 }
