@@ -65,6 +65,18 @@ namespace GoogleMapsAPI.NET.API.Directions.Components
         [DataMember(Name = "end_address")]
         public string EndAddress { get; set; }
 
+        /// <summary>
+        /// The departure time specified
+        /// </summary>
+        [DataMember(Name = "departure_time")]
+        public Time DepartureTime { get; set; }
+
+        /// <summary>
+        /// Expected arrival time
+        /// </summary>
+        [DataMember(Name = "arrival_time")]
+        public Time ArrivalTime { get; set; }
+
         #endregion
 
     }
