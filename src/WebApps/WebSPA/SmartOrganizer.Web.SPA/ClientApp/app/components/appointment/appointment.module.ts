@@ -2,6 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
 import { AppointmentDetailComponent } from './appointment-detail/appointment-detail.component';
@@ -18,14 +19,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {  } from '@angular/material';
 
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
+import { CalendarModule } from 'angular-calendar';
+
 @NgModule({
     imports: [
+        BrowserAnimationsModule,
         CommonModule,
         FormsModule,
+        CalendarModule.forRoot(),
         ReactiveFormsModule,
         RouterModule.forChild([
             { path: 'appointment', component: AppointmentListComponent },
@@ -49,9 +53,9 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     providers: [
         AppointmentService,
         AppointmentGuardService,
-        
 
-     //   MatDialogRef
+
+        //   MatDialogRef
     ],
     exports: [
         AppointmentListComponent

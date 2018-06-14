@@ -38,7 +38,7 @@ namespace SmartOrganizer.Timetable.API
 				.AddTransient<IMapsAPIClient, MapsAPIClient>(c => new MapsAPIClient("AIzaSyCX780yRIpZYmbfQaE4imqJZQ9rCyar5mw"))
 				.AddTransient<IGeocodingService, GeocodingService>()
 				.AddTransient<IDirectionsService, DirectionsService>()
-				.AddTransient<IAppointmentService, AppointmentService>()
+				.AddTransient<IAppointmentService, FakeAppointmentService>()
 				.AddTransient<ITimetableService, TimetableService>();
 
 			services.AddCors(options =>

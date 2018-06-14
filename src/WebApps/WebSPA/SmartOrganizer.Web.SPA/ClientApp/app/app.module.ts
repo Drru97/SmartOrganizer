@@ -11,7 +11,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppointmentModule } from './components/appointment/appointment.module';
 import { HomeModule } from './components/home/home.module';
-import { LoginModule } from './components/login/login.module';
+//import { LoginModule } from './components/login/login.module';
 import { AppComponent } from './components/app/app.component';
 
 import { DataService } from './components/shared/services/data.service';
@@ -23,7 +23,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AppointmentListComponent } from './components/appointment/appointment-list/appointment-list.component';
 
 import { AppointmentAddDialogComponent } from './components/appointment/appointment-add-dialog/appointment-add-dialog.component';
-import { LoginComponent } from './components/login/login.component';
+//import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
     imports: [
@@ -33,7 +33,7 @@ import { LoginComponent } from './components/login/login.component';
         RouterModule.forRoot([
             { path: 'home', component: HomeComponent },
             { path: 'appointment', component: AppointmentListComponent },
-            { path: 'login', component: LoginComponent },
+        //    { path: 'login', component: LoginComponent },
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: '**', redirectTo: 'home' }
         ]),
@@ -45,7 +45,7 @@ import { LoginComponent } from './components/login/login.component';
             storageType: 'localStorage'
         }),
         HomeModule,
-        LoginModule,
+    //    LoginModule,
         MatToolbarModule,
         MatTabsModule
     ],

@@ -15,7 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AppointmentModule } from './components/appointment/appointment.module';
 import { HomeModule } from './components/home/home.module';
-import { LoginModule } from './components/login/login.module';
+//import { LoginModule } from './components/login/login.module';
 import { AppComponent } from './components/app/app.component';
 import { DataService } from './components/shared/services/data.service';
 import { ConfigurationService } from './components/shared/services/configuration.service';
@@ -24,7 +24,7 @@ import { LocalStorageModule } from 'angular-2-local-storage';
 import { HomeComponent } from './components/home/home.component';
 import { AppointmentListComponent } from './components/appointment/appointment-list/appointment-list.component';
 import { AppointmentAddDialogComponent } from './components/appointment/appointment-add-dialog/appointment-add-dialog.component';
-import { LoginComponent } from './components/login/login.component';
+//import { LoginComponent } from './components/login/login.component';
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -36,7 +36,7 @@ AppModule = __decorate([
             RouterModule.forRoot([
                 { path: 'home', component: HomeComponent },
                 { path: 'appointment', component: AppointmentListComponent },
-                { path: 'login', component: LoginComponent },
+                //    { path: 'login', component: LoginComponent },
                 { path: '', redirectTo: 'home', pathMatch: 'full' },
                 { path: '**', redirectTo: 'home' }
             ]),
@@ -48,7 +48,7 @@ AppModule = __decorate([
                 storageType: 'localStorage'
             }),
             HomeModule,
-            LoginModule,
+            //    LoginModule,
             MatToolbarModule,
             MatTabsModule
         ],
