@@ -6,10 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { MdlModule } from '@angular-mdl/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -25,6 +27,28 @@ import { HomeComponent } from './components/home/home.component';
 import { AppointmentListComponent } from './components/appointment/appointment-list/appointment-list.component';
 import { AppointmentAddDialogComponent } from './components/appointment/appointment-add-dialog/appointment-add-dialog.component';
 //import { LoginComponent } from './components/login/login.component';
+import { CalendarComponent } from './components/appointment/calendar/calendar.component';
+import { CalendarHeaderComponent } from './components/appointment/calendar/calendar-header.component';
+import { DateTimePickerComponent } from './components/appointment/calendar/date-time-picker.component';
+import { CalendarModule } from 'angular-calendar';
+import { NgbDatepickerModule, NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import 'core-js/es6/symbol';
+import 'core-js/es6/object';
+import 'core-js/es6/function';
+import 'core-js/es6/parse-int';
+import 'core-js/es6/parse-float';
+import 'core-js/es6/number';
+import 'core-js/es6/math';
+import 'core-js/es6/string';
+import 'core-js/es6/date';
+import 'core-js/es6/array';
+import 'core-js/es6/regexp';
+import 'core-js/es6/map';
+import 'core-js/es6/weak-map';
+import 'core-js/es6/set';
+import 'core-js/es6/reflect';
+import 'core-js/es7/reflect';
+import 'zone.js/dist/zone';
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -33,9 +57,15 @@ AppModule = __decorate([
             BrowserModule,
             FormsModule,
             HttpModule,
+            CommonModule,
+            NgbDatepickerModule.forRoot(),
+            NgbTimepickerModule.forRoot(),
+            CalendarModule.forRoot(),
+            NgbModalModule.forRoot(),
             RouterModule.forRoot([
                 { path: 'home', component: HomeComponent },
                 { path: 'appointment', component: AppointmentListComponent },
+                { path: 'calendar', component: CalendarComponent },
                 //    { path: 'login', component: LoginComponent },
                 { path: '', redirectTo: 'home', pathMatch: 'full' },
                 { path: '**', redirectTo: 'home' }
@@ -53,7 +83,10 @@ AppModule = __decorate([
             MatTabsModule
         ],
         declarations: [
-            AppComponent
+            AppComponent,
+            CalendarComponent,
+            CalendarHeaderComponent,
+            DateTimePickerComponent
         ],
         providers: [
             DataService,
@@ -65,6 +98,10 @@ AppModule = __decorate([
         ],
         entryComponents: [
             AppointmentAddDialogComponent
+        ],
+        exports: [
+            CalendarComponent,
+            DateTimePickerComponent
         ]
     })
 ], AppModule);

@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
                 this.router.navigate(['/appointment']);
                 break;
             case 2:
-                this.router.navigate(['/statistics']);
+                this.router.navigate(['/calendar']);
                 break;
         }
     }
@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
                 this.router.navigate(['/appointment']);
                 break;
             case 2:
-                this.router.navigate(['/statistics']);
+                this.router.navigate(['/calendar']);
                 break;
             default:
                 return;
